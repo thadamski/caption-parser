@@ -1,9 +1,9 @@
-package com.github.mtailor.util
+package com.crowdscriber.caption.util
 
 import java.io.InputStream
 
-import com.github.mtailor.common.Vocabulary.SubtitleBlock
-import com.github.mtailor.vttdissector.VttDissector
+import com.crowdscriber.caption.common.Vocabulary.SubtitleBlock
+import com.crowdscriber.caption.vttdissector.VttDissector
 import org.htmlcleaner.HtmlCleaner
 
 import scala.collection.mutable

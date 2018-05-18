@@ -1,8 +1,8 @@
-package com.github.mtailor.srtdissector
+package com.crowdscriber.caption.vttdissector
 
 import java.io.{InputStream, Reader}
 
-import com.github.mtailor.common.Vocabulary._
+import com.crowdscriber.caption.common.Vocabulary._
 import org.apache.commons.io.input.BOMInputStream
 
 import scala.io._
@@ -10,16 +10,16 @@ import scala.util.Try
 
 /**
  * The trait/object offering the final API.
- * Parses the InputStream from a UTF8-encoded .srt file
+ * Parses the InputStream from a UTF8-encoded .vtt file
  */
-object SrtDissector extends SrtDissector
+object VttDissector extends VttDissector
 
 
-trait SrtDissector extends (InputStream => Try[Srt]) {
+trait VttDissector extends (InputStream => Try[Vtt]) {
 
 
-  override def apply(is: InputStream): Try[Srt] =
-    SrtParsers.doFullParsing(withoutBom(is))
+  override def apply(is: InputStream): Try[Vtt] =
+    VttParsers.doFullParsing(withoutBom(is))
 
 
   private def withoutBom(is: InputStream) =

@@ -1,8 +1,8 @@
-name := "srt-dissector"
+name := "caption-parser"
 
-organization := "com.github.mtailor"
+organization := "com.crowdscriber.captions"
 
-version := "0.1.2"
+version := "0.1.3"
 
 scalaVersion := "2.11.12"
 

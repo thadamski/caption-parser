@@ -1,4 +1,4 @@
-package com.github.mtailor.common
+package com.crowdscriber.caption.common
 
 object Vocabulary {
 

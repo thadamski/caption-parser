@@ -1,4 +1,4 @@
-package com.github.mtailor.test
+package com.crowdscriber.caption.test
 
 import java.io._
 

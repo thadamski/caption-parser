@@ -1,8 +1,8 @@
-package com.github.mtailor.test.util
+package com.crowdscriber.caption.test.util
 
-import com.github.mtailor.common.Vocabulary.SubtitleBlock
-import com.github.mtailor.test.FromClasspathLoader
-import com.github.mtailor.util.SubtitleUtil
+import com.crowdscriber.caption.common.Vocabulary.SubtitleBlock
+import com.crowdscriber.caption.test.FromClasspathLoader
+import com.crowdscriber.caption.util.SubtitleUtil
 import org.specs2.mutable.Specification
 
 object SubtitleUtilSpecs extends Specification with FromClasspathLoader {

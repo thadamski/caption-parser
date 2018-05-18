@@ -1,8 +1,8 @@
-package com.github.mtailor.test.vttdissector
+package com.crowdscriber.caption.test.vttdissector
 
-import com.github.mtailor.common.Vocabulary._
-import com.github.mtailor.test.FromClasspathLoader
-import com.github.mtailor.util.SubtitleUtil
+import com.crowdscriber.caption.common.Vocabulary._
+import com.crowdscriber.caption.test.FromClasspathLoader
+import com.crowdscriber.caption.util.SubtitleUtil
 import org.specs2.mutable.Specification
 
 

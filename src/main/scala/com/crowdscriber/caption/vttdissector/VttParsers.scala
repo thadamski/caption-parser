@@ -1,8 +1,8 @@
-package com.github.mtailor.vttdissector
+package com.crowdscriber.caption.vttdissector
 
 import java.io.Reader
 
-import com.github.mtailor.common.Vocabulary._
+import com.crowdscriber.caption.common.Vocabulary.{SubtitleBlock, Time, Vtt, asTime}
 
 import scala.util.Try
 import scala.util.control.NonFatal

@@ -1,8 +1,8 @@
-package com.github.mtailor.test.srtdissector
+package com.crowdscriber.caption.test.srtdissector
 
-import com.github.mtailor.common.Vocabulary._
-import com.github.mtailor.srtdissector.SrtDissector
-import com.github.mtailor.test.FromClasspathLoader
+import com.crowdscriber.caption.common.Vocabulary.{SubtitleBlock, asTime}
+import com.crowdscriber.caption.srtdissector.SrtDissector
+import com.crowdscriber.caption.test.FromClasspathLoader
 import org.specs2.mutable.Specification
 import org.specs2.specification.core.Fragment
 

@@ -1,8 +1,8 @@
-package com.github.mtailor.srtdissector
+package com.crowdscriber.caption.srtdissector
 
 import java.io.Reader
 
-import com.github.mtailor.common.Vocabulary._
+import com.crowdscriber.caption.common.Vocabulary._
 
 import scala.util.Try
 import scala.util.control.NonFatal
