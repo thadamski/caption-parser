@@ -51,6 +51,8 @@ object SubtitleUtil {
           if (dedupeRollup) {
             if (TIMED_TEXT.pattern.matcher(captionLines.mkString).find) {
               result.push(vttElem.copy(lines = captionLines))
+            } else if (result.isEmpty) {
+              result.push(vttElem)
             } else {
               val prev = result.pop()
               result.push(prev.copy(end = vttElem.end))
