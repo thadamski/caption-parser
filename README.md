@@ -3,6 +3,14 @@ caption-parser
 
 A scala parser for the [.srt](https://wiki.videolan.org/SubRip/) and [.vtt](https://www.w3.org/TR/webvtt1/) subtitle/caption file formats.
 
+# Using
+
+Add the following to your build.sbt file (scala `v2.11` and `v2.12` versions available):
+
+```
+libraryDependencies +=  "com.crowdscriber.captions" %% "caption-parser" % "0.1.4"
+```
+
 # SRT (SubRip)
 
 A .srt file is of the format:
