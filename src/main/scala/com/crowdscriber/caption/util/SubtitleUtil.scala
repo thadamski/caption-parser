@@ -60,7 +60,7 @@ object SubtitleUtil {
           } else {
             result.push(vttElem)
           }
-        }}.reverse.elems
+        }}.reverse.toList
       }
     }
   }

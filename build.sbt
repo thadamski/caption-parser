@@ -2,13 +2,25 @@ name := "caption-parser"
 
 organization := "com.crowdscriber.captions"
 
-version := "0.1.4"
+version := "0.1.5"
 
 scalaVersion := "2.11.12"
 
-crossScalaVersions := Seq("2.11.12", "2.12.6")
+crossScalaVersions := Seq("2.11.12", "2.12.6", "2.13.0")
+
+scalacOptions ++= Seq(
+  "-encoding", "utf8", // Option and arguments on same line
+  "-Xfatal-warnings",  // New lines for each options
+  "-deprecation",
+  "-unchecked",
+  "-language:implicitConversions",
+  "-language:higherKinds",
+  "-language:existentials",
+  "-language:postfixOps"
+)
 
 // POM settings for Sonatype
+sonatypeProfileName := "com.crowdscriber"
 homepage := Some(url("https://github.com/Crowdscriber/caption-parser/blob/master/README.md"))
 scmInfo := Some(ScmInfo(url("https://github.com/Crowdscriber/caption-parser"),
 "git@github.com:Crowdscriber/caption-parser.git"))
@@ -29,16 +41,11 @@ publishTo := Some(
     Opts.resolver.sonatypeStaging
 )
 
-scalacOptions ++= Seq(
-  "-feature",
-  "-language:implicitConversions"
-)
 
-
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2"
 
 libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
 libraryDependencies += "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.22"
 
-libraryDependencies += "org.specs2" %% "specs2-core" % "4.2.0" % Test
+libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.0" % Test
