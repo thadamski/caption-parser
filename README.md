@@ -5,10 +5,10 @@ A scala parser for the [.srt](https://wiki.videolan.org/SubRip/) and [.vtt](http
 
 # Using
 
-Add the following to your build.sbt file (scala `v2.11` and `v2.12` versions available):
+Add the following to your build.sbt file (scala `v2.11`, `v2.12`, `v2.13` versions available):
 
 ```
-libraryDependencies +=  "com.crowdscriber.captions" %% "caption-parser" % "0.1.4"
+libraryDependencies +=  "com.crowdscriber.captions" %% "caption-parser" % "0.1.5"
 ```
 
 # SRT (SubRip)
