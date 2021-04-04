@@ -29,6 +29,12 @@ object VttDissectorSpecs extends Specification with FromClasspathLoader {
       result mustNotEqual null
       result.take(5) must beEqualTo(SubtitleData.expectedFirst5DedupedCaptonsFromYouTubeVttSample)
     }
+    "\tde-dupe a WebVTT where a subtitle might be a number (don't parse that as a subtitle header number)" in {
+      lazy val result = SubtitleUtil.vttToSubtitles(file("vtt_files/sample_youtube_subtitle_is_number.vtt"), true)
+      result mustNotEqual null
+      result.take(5).foreach(println)
+      result.take(5) must beEqualTo(SubtitleData.expectedFirst5DedupedCaptonsFromYouTubeVttSample2)
+    }
     "\tDO NOT de-dupe a WebVTT if not specified" in {
       lazy val result = SubtitleUtil.vttToSubtitles(file("vtt_files/sample_youtube.vtt"))
       result mustNotEqual null
@@ -57,6 +63,14 @@ object VttDissectorSpecs extends Specification with FromClasspathLoader {
       SubtitleBlock(3210, 6210, "<c.colorE5E5E5>on<00:00:03.720><c> pork</c></c><c.colorCCCCCC><00:00:04.500><c> so</c><00:00:04.830><c> we've</c><00:00:04.950><c> done</c><00:00:05.190><c> American</c><00:00:05.940><c> barbecue</c></c>\n".split("\n", -1)),
       SubtitleBlock(6210, 9450, "<c.colorE5E5E5>pork<00:00:06.990><c> ribs</c></c><c.colorCCCCCC><00:00:07.319><c> before</c></c><c.colorE5E5E5><00:00:07.799><c> oh</c><00:00:08.040><c> yeah</c><00:00:08.309><c> today</c><00:00:08.700><c> we're</c></c>\n".split("\n", -1)),
       SubtitleBlock(9450, 11969, "doing<00:00:09.599><c> pork</c><00:00:10.019><c> Filipino</c><00:00:10.679><c> style</c></c><c.colorCCCCCC><00:00:10.889><c> I</c><00:00:11.219><c> am</c></c><c.colorE5E5E5><00:00:11.280><c> so</c></c>\n".split("\n", -1))
+    )
+
+    val expectedFirst5DedupedCaptonsFromYouTubeVttSample2 = Seq(
+      SubtitleBlock(2681990,2682319,"i love you all well that's just so great\n \n".split("\n", -1)),
+      SubtitleBlock(2682319,2685760,"20.<00:44:42.720><c> so</c><00:44:42.880><c> i</c><00:44:43.200><c> i</c><00:44:43.680><c> kind</c><00:44:43.839><c> of</c><00:44:44.240><c> want</c><00:44:44.400><c> to</c><00:44:44.560><c> tune</c><00:44:44.880><c> in</c><00:44:44.960><c> now</c>\n".split("\n", -1)),
+      SubtitleBlock(2685760,2687920,"and<00:44:45.839><c> you</c><00:44:46.000><c> got</c><00:44:46.160><c> to</c><00:44:46.240><c> figure</c><00:44:46.560><c> that's</c><00:44:46.880><c> not</c><00:44:47.440><c> easy</c><00:44:47.760><c> to</c>\n".split("\n", -1)),
+      SubtitleBlock(2687920,2689920,"do<00:44:48.240><c> right</c><00:44:48.640><c> just</c><00:44:48.880><c> technically</c><00:44:49.440><c> i</c><00:44:49.520><c> mean</c><00:44:49.680><c> that's</c>\n".split("\n", -1)),
+      SubtitleBlock(2689920,2691920,"kind<00:44:50.079><c> of</c><00:44:50.240><c> a</c><00:44:50.480><c> big</c><00:44:50.800><c> challenge</c><00:44:51.119><c> for</c><00:44:51.280><c> anyone</c>\n".split("\n", -1))
     )
   }
 }

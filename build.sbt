@@ -2,7 +2,7 @@ name := "caption-parser"
 
 organization := "com.crowdscriber.captions"
 
-version := "0.1.5"
+version := "0.1.6"
 
 scalaVersion := "2.11.12"
 
@@ -32,6 +32,7 @@ developers := List(Developer(
 ))
 licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
 publishMavenStyle := true
+publishConfiguration := publishConfiguration.value.withOverwrite(true)
 
 // Add sonatype repository settings
 publishTo := Some(

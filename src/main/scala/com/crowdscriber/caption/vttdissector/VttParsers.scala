@@ -37,7 +37,7 @@ object VttParsers extends RegexParsers {
   private def webvttHeaderText: Parser[Seq[String]] = repsep(not(subtitleHeader) ~> optionalLine,  eol)
   
   private def subtitleHeader: Parser[SubtitleBlock] = {
-    (subtitleNumber ~ whiteSpace).? ~>
+    (subtitleNumber ~ eol).? ~>
       time ~ arrow ~ time ~ opt(textLine) ~ eol
   } ^^ {
     case

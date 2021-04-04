@@ -18,3 +18,9 @@ project/plugins/project/
 
 # Intellij
 .idea
+
+.bloop
+.metals
+.vscode
+project/metals.sbt
+project/project
