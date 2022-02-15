@@ -47,6 +47,6 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % 
 
 libraryDependencies += "commons-io" % "commons-io" % "2.4"
 
-libraryDependencies += "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.22"
+libraryDependencies += "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.26"
 
 libraryDependencies += "org.specs2" %% "specs2-core" % "4.7.0" % Test
